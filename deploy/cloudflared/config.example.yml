@@ -1,0 +1,12 @@
+# Example only. Replace the hostnames with names on a domain you control.
+# A tunnel created in the Cloudflare dashboard ignores this file.
+# Add the same routes there: dashboard -> http://127.0.0.1:8501 and API -> http://127.0.0.1:8000.
+tunnel: REPLACE_WITH_TUNNEL_ID
+credentials-file: REPLACE_WITH_CREDENTIALS_JSON
+
+ingress:
+  - hostname: REPLACE_WITH_DASHBOARD_HOSTNAME
+    service: http://127.0.0.1:8501
+  - hostname: REPLACE_WITH_API_HOSTNAME
+    service: http://127.0.0.1:8000
+  - service: http_status:404

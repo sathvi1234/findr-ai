@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "findr-ai"
+version = "0.1.0"
+description = "Synthetic GPS security and human-gated parcel handover for e-commerce deliveries."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.30.0",
+    "pydantic>=2.0.0",
+    "folium>=0.15.0",
+    "streamlit-folium>=0.16.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "pytest>=7.4.0",
+    "pymongo>=4.13.0",
+    "fastapi>=0.110.0",
+    "httpx>=0.27.0",
+    "uvicorn>=0.27.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
